@@ -1,18 +1,25 @@
 # 1 워크플로의 이름 지정
 name: CI
 
-# 2 워크플로가 시작될 조건 지정
+# 2 워크플로가 시작될 조건 지정. main 브랜치에 push 될때 실행됨
 on:
   push:
     branches: [ "main" ]
 
+# 하나의 workflow는 1개 이상의 Job으로 구성됨. 여러 job은 병렬적으로 수행됨.
 jobs:
+  # 빌드 이름
   build:
     runs-on: ubuntu-latest # 3 실행 환경 지정
-    #4 실행스텝지정
+    #4 실행스텝지정. 특정 작업을 수행하는 가장 작은 단위. Job은 step으로 구성되어 있다.
     steps:
       - name: Hello world 찍기
         run : echo "Hello world"
+
+      - name : 여러 명령어 문장 작성
+        run :
+          echo "Hello"
+          echo "world!!"
 
 #      - uses: actions/checkout@v3
 #
