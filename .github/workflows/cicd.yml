@@ -17,12 +17,12 @@ jobs:
         run : echo "Hello world"
 
       - name : 여러 명령어 문장 작성
-        run :
+        run : |
           echo "Hello"
           echo "world!!"
 
       - name : Github Actions 자체에 저장되어 있는 변수 사용하기
-        run:
+        run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
 
