@@ -21,6 +21,11 @@ jobs:
           echo "Hello"
           echo "world!!"
 
+      - name : Github Actions 자체에 저장되어 있는 변수 사용하기
+        run:
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+
 #      - uses: actions/checkout@v3
 #
 #      - uses: actions/setup-java@v3
