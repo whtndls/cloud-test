@@ -25,6 +25,10 @@ jobs:
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+          
+      - name : 깃헙 액션 환경변수 테스트
+        run : | 
+          echo ${{ secrets.TEST_VAR }}
 
 #      - uses: actions/checkout@v3
 #
